@@ -21,3 +21,7 @@ services.AddInfraStructure(Configuration, typeof(Startup).Assembly);
 ```cs
 app.AddInfrastructureMiddlewares();
 ```
+
+## Automatically add IOC services and configurations
+1. Create a class that extends the **VerticalSlice.Abstraction.Ioc.IIocConfig**
+2. Do the implementation of the interface method: **IocServiceInstall**
