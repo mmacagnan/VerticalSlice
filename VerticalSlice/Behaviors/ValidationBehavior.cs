@@ -16,6 +16,18 @@ where TRequest : class, IRequest<TResponse>
         _validators = validators;
     }
 
+    /// <summary>
+    /// Fluent validation behavior that initializes
+    /// all the fluent validators instances of a request <see cref="TRequest"/>.
+    ///
+    /// If the validate method return an invalid state, we throw a <see cref="ValidationException"/>
+    /// passing all the errors as dictionary
+    /// </summary>
+    /// <param name="rq"></param>
+    /// <param name="next"></param>
+    /// <param name="ct"></param>
+    /// <returns></returns>
+    /// <exception cref="ValidationException"></exception>
     public async Task<TResponse> Handle(
         TRequest rq, 
         RequestHandlerDelegate<TResponse> next, 

@@ -7,7 +7,16 @@ namespace VerticalSlice.Extensions;
 
 public static class IocServicesExtension
 {
-    public static IServiceCollection IocServicesInAssembly(this IServiceCollection services,
+    /// <summary>
+    /// Call IocServiceInstall method of all
+    /// classes that inherits <see cref="IIocConfig"/> interface
+    /// </summary>
+    /// <param name="services"></param>
+    /// <param name="configuration"></param>
+    /// <param name="assembly"></param>
+    /// <returns></returns>
+    public static IServiceCollection IocServicesInAssembly(
+        this IServiceCollection services,
         IConfiguration configuration,
         Assembly assembly)
     {

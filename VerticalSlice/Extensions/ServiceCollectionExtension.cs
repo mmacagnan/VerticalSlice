@@ -9,6 +9,14 @@ namespace VerticalSlice.Extensions;
 
 public static class ServiceCollectionExtension
 {
+    /// <summary>
+    /// All the possible service methods are called and injected
+    /// in the di
+    /// </summary>
+    /// <param name="services"></param>
+    /// <param name="configuration"></param>
+    /// <param name="assembly"></param>
+    /// <returns></returns>
     public static IServiceCollection AddInfraStructure(this IServiceCollection services,
         IConfiguration configuration,
         Assembly assembly)

@@ -19,6 +19,12 @@ public abstract class AbstractBaseController
     }
 
 
+    /// <summary>
+    /// Method that try to create a Ok response
+    /// </summary>
+    /// <param name="rq"></param>
+    /// <typeparam name="T"></typeparam>
+    /// <returns></returns>
     protected async Task<ActionResult<T>> StandardResponse<T>(IRequest<T> rq)
         => this.OkUnit(await _mediator.Send(rq), "");
 }

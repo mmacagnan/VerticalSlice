@@ -6,6 +6,12 @@ namespace VerticalSlice.Extensions;
 
 public static class FluentValidationExtension
 {
+    /// <summary>
+    /// Inject all the validators from assembly
+    /// </summary>
+    /// <param name="services"></param>
+    /// <param name="assembly"></param>
+    /// <returns></returns>
     public static IServiceCollection AddInfrastructureValidation(this IServiceCollection services, Assembly assembly)
     {
         services.AddValidatorsFromAssembly(assembly);

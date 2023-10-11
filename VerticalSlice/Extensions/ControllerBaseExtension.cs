@@ -4,6 +4,10 @@ using VerticalSlice.Models;
 
 namespace VerticalSlice.Extensions;
 
+/// <summary>
+/// All basic methods that we can run
+/// in an api controller.
+/// </summary>
 public static class ControllerBaseExtension
 {
     public static OkObjectResult OkUnit(this ControllerBase controller, object value, string token)
